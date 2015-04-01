@@ -1,5 +1,5 @@
 ---
-site: https://anypoint.mulesoft.com/apiplatform/popular/admin/#/dashboard/apis/12164/versions/12574/portal/pages/13394/edit
+site: https://anypoint.mulesoft.com/apiplatform/popular/admin/#/dashboard/apis/12164/versions/12574/portal/pages/28944/edit
 apiNotebookVersion: 1.1.66
 title: File. part 1
 ---
@@ -137,32 +137,6 @@ untrashCreateResponse = client.files.fileId(ID_FILE).untrash.post()
 
 ```javascript
 assert.equal( untrashCreateResponse.status, 200 )
-```
-
-Test watch channel id.
-
-```javascript
-ID_CHANNEL = "notebookTestWatchChannel"
-```
-
-The address where notifications are delivered for this channel.
-
-```javascript
-ADDRESS = prompt('Please enter address for watch channel. Example: \'https://yourdomain.com\'')
-```
-
-Start watching for changes to a file
-
-```javascript
-watchCreateResponse = client.files.fileId(ID_FILE).watch.post({
-  "id" : ID_CHANNEL ,
-  "type" : "web_hook" ,
-  "address" : ADDRESS
-})
-```
-
-```javascript
-assert.equal( watchCreateResponse.status, 200 )
 ```
 
 Lists a file's parents

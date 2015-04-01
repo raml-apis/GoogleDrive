@@ -1,7 +1,7 @@
 ---
-site: https://anypoint.mulesoft.com/apiplatform/popular/admin/#/dashboard/apis/12164/versions/12574/portal/pages/13375/edit
+site: https://anypoint.mulesoft.com/apiplatform/popular/admin/#/dashboard/apis/12164/versions/12574/portal/pages/28943/edit
 apiNotebookVersion: 1.1.66
-title: About, changes, permissionIds, app, channels
+title: About, changes, permissionIds, app
 ---
 
 ```javascript
@@ -60,47 +60,6 @@ changeResponse = client.changes.changeId(ID_CHANGE).get()
 
 ```javascript
 assert.equal( changeResponse.status, 200 )
-```
-
-Test watch channel id.
-
-```javascript
-ID_CHANNEL = "notebookTestChannel"
-```
-
-The address where notifications are delivered for this channel.
-
-```javascript
-ADDRESS = prompt('Please enter address for watch channel. Example: \'https://yourdomain.com\'')
-```
-
-Watch for all changes to a user's Drive
-
-```javascript
-watchCreateResponse = client.changes.watch.post({
-  "id" : ID_CHANNEL ,
-  "type" : "web_hook" ,
-  "address" : ADDRESS
-})
-```
-
-```javascript
-assert.equal( watchCreateResponse.status, 200 )
-ID_RESOURCE = watchCreateResponse.body.resourceId
-```
-
-Stop watching for changes to a resource.
-If successful, this method returns an empty response body.
-
-```javascript
-channelsStopResponse = client.channels.stop.post({
-  "id" : ID_CHANNEL ,
-  "resourceId" : ID_RESOURCE
-})
-```
-
-```javascript
-assert.equal( channelsStopResponse.status, 204 )
 ```
 
 Returns the permission ID for an email address
