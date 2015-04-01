@@ -20,7 +20,7 @@ CLIENT_SECRET = prompt("Please, enter Client Secret of your Google application."
 ```
 
 ```javascript
-API.createClient('client', '/apiplatform/repository/public/organizations/30/apis/12468/versions/12920/definition');
+API.createClient('client', '#REF_TAG_DEFENITION_Google Drive Upload:');
 ```
 
 ```javascript
@@ -31,7 +31,7 @@ API.authenticate(client,"oauth_2_0",{
 ```
 
 ```javascript
-API.createClient('driveClient', '/apiplatform/repository/public/organizations/30/apis/12164/versions/12574/definition');
+API.createClient('driveClient', '#REF_TAG_DEFENITION_Google Drive:');
 ```
 
 ```javascript

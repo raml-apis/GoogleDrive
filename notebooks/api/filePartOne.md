@@ -20,7 +20,7 @@ CLIENT_SECRET = prompt("Please, enter Client Secret of your Google application."
 ```
 
 ```javascript
-API.createClient('client', '/apiplatform/repository/public/organizations/30/apis/12164/versions/12574/definition');
+API.createClient('client', '#REF_TAG_DEFENITION');
 ```
 
 ```javascript
