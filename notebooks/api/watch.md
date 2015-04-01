@@ -78,12 +78,6 @@ watchCreateResponse = client.files.fileId(ID_FILE).watch.post({
 assert.equal( watchCreateResponse.status, 200 )
 ```
 
-Deleting temporary files
-
-```javascript
-client.files.fileId(ID_FILE).delete()
-```
-
 Test watch channel id.
 
 ```javascript
@@ -117,4 +111,10 @@ channelsStopResponse = client.channels.stop.post({
 
 ```javascript
 assert.equal( channelsStopResponse.status, 204 )
+```
+
+Deleting temporary files
+
+```javascript
+client.files.fileId(ID_FILE).delete()
 ```
