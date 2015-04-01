@@ -1,5 +1,5 @@
 ---
-site: https://anypoint.mulesoft.com/apiplatform/popular/admin/#/dashboard/apis/12164/versions/12574/portal/pages/13394/preview
+site: https://anypoint.mulesoft.com/apiplatform/popular/admin/#/dashboard/apis/12164/versions/12574/portal/pages/13394/edit
 apiNotebookVersion: 1.1.66
 title: File. part 1
 ---
@@ -15,10 +15,8 @@ assert = chai.assert
 ```
 
 ```javascript
-//CLIENT_ID = prompt("Please, enter Client ID of your Google application.")
-//CLIENT_SECRET = prompt("Please, enter Client Secret of your Google application.")
-CLIENT_ID = "261592100079-5tplbsi62mj6vgdcs8dn8i84nhrrc8ou.apps.googleusercontent.com"
-CLIENT_SECRET = "Jp9stAkyj9QqHU3FH-LdDXdy"
+CLIENT_ID = prompt("Please, enter Client ID of your Google application.")
+CLIENT_SECRET = prompt("Please, enter Client Secret of your Google application.")
 ```
 
 ```javascript
@@ -141,13 +139,25 @@ untrashCreateResponse = client.files.fileId(ID_FILE).untrash.post()
 assert.equal( untrashCreateResponse.status, 200 )
 ```
 
+Test watch channel id.
+
+```javascript
+ID_CHANNEL = "notebookTestWatchChannel"
+```
+
+The address where notifications are delivered for this channel.
+
+```javascript
+ADDRESS = prompt('Please enter address for watch channel. Example: \'https://yourdomain.com\'')
+```
+
 Start watching for changes to a file
 
 ```javascript
 watchCreateResponse = client.files.fileId(ID_FILE).watch.post({
-  "id" : "string" ,
+  "id" : ID_CHANNEL ,
   "type" : "web_hook" ,
-  "address" : "https://api-notebook.anypoint.mulesoft.com/authenticate/oauth.html"
+  "address" : ADDRESS
 })
 ```
 

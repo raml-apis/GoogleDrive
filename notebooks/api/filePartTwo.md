@@ -1,5 +1,5 @@
 ---
-site: https://anypoint.mulesoft.com/apiplatform/popular/admin/#/dashboard/apis/12164/versions/12574/portal/pages/13395/preview
+site: https://anypoint.mulesoft.com/apiplatform/popular/admin/#/dashboard/apis/12164/versions/12574/portal/pages/13395/edit
 apiNotebookVersion: 1.1.66
 title: File. part 2
 ---
@@ -15,10 +15,8 @@ assert = chai.assert
 ```
 
 ```javascript
-//CLIENT_ID = prompt("Please, enter Client ID of your Google application.")
-//CLIENT_SECRET = prompt("Please, enter Client Secret of your Google application.")
-CLIENT_ID = "261592100079-5tplbsi62mj6vgdcs8dn8i84nhrrc8ou.apps.googleusercontent.com"
-CLIENT_SECRET = "Jp9stAkyj9QqHU3FH-LdDXdy"
+CLIENT_ID = prompt("Please, enter Client ID of your Google application.")
+CLIENT_SECRET = prompt("Please, enter Client Secret of your Google application.")
 ```
 
 ```javascript

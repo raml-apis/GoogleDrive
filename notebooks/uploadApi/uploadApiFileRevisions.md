@@ -1,5 +1,5 @@
 ---
-site: https://anypoint.mulesoft.com/apiplatform/popular/admin/#/dashboard/apis/12468/versions/12920/portal/pages/13791/preview
+site: https://anypoint.mulesoft.com/apiplatform/popular/admin/#/dashboard/apis/12164/versions/12574/portal/pages/18186/edit
 apiNotebookVersion: 1.1.66
 title: Upload API, File revisions
 ---
@@ -15,10 +15,8 @@ assert = chai.assert
 ```
 
 ```javascript
-//CLIENT_ID = prompt("Please, enter Client ID of your Google application.")
-//CLIENT_SECRET = prompt("Please, enter Client Secret of your Google application.")
-CLIENT_ID = "261592100079-5tplbsi62mj6vgdcs8dn8i84nhrrc8ou.apps.googleusercontent.com"
-CLIENT_SECRET = "Jp9stAkyj9QqHU3FH-LdDXdy"
+CLIENT_ID = prompt("Please, enter Client ID of your Google application.")
+CLIENT_SECRET = prompt("Please, enter Client Secret of your Google application.")
 ```
 
 ```javascript
@@ -98,8 +96,14 @@ fileUpdateResponse = client.files.fileId(ID_FILE).put(
 assert.equal( fileUpdateResponse.status, 200 )
 ```
 
+Exports the contents of the Realtime API data model associated with this file as JSON.
+
 ```javascript
-driveClient.files.fileId(ID_FILE).realtime.get()
+realtimeResponse = driveClient.files.fileId(ID_FILE).realtime.get()
+```
+
+```javascript
+assert.equal( realtimeResponse.status, 200 )
 ```
 
 Overwrites the Realtime API data model associated with this file with the provided JSON data model.
@@ -113,7 +117,7 @@ If successful, this method returns an empty response body.
 
 ```javascript
 realtimeUpdateResponse = client.files.fileId(ID_FILE).realtime.put({},{"query":{
-  "uploadType": "media"
+  "uploadType": "resumable"
   }
 })
 ```
