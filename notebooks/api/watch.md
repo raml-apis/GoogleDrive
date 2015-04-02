@@ -81,7 +81,7 @@ assert.equal( watchCreateResponse.status, 200 )
 Test watch channel id.
 
 ```javascript
-ID_CHANNEL = "notebookTestChannel"
+ID_CHANNEL = "notebookTestChannel2"
 ```
 
 Watch for all changes to a user's Drive
