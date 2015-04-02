@@ -27,6 +27,7 @@ API.createClient('client', '#REF_TAG_DEFENITION');
 API.authenticate(client,"oauth_2_0",{
   clientId : CLIENT_ID,
   clientSecret : CLIENT_SECRET
+  scopes: [ "https://www.googleapis.com/auth/drive", "https://www.googleapis.com/auth/drive.apps.readonly" ]
 })
 ```
 
