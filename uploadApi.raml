@@ -6,8 +6,8 @@ mediaType: application/json
 securitySchemes:
   - oauth_2_0: !include securitySchemes/oauth_2_0.raml
 schemas:
-  - file: !include /schemas/file-schema.json
-  - newFileRequest: !include /schemas/newFileRequest-schema.json
+  - file: !include schemas/file-schema.json
+  - newFileRequest: !include schemas/newFileRequest-schema.json
 securedBy: [ oauth_2_0 ]
 /files: 
   post: 
